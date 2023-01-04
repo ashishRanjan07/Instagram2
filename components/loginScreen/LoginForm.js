@@ -25,6 +25,7 @@ const LoginForm = ({ navigation }) => {
     try {
       await firebase.auth().signInWithEmailAndPassword(email, password);
       console.log("Login Sucessful", email, password);
+      navigation.navigate("BottomTabNavigation");
     } catch (error) {
       Alert.alert(
         "Login Error",
