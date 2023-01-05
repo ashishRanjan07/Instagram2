@@ -7,6 +7,7 @@ import {
   Dimensions,
   StyleSheet,
   Image,
+  SafeAreaView,
 } from "react-native";
 import React, { useState } from "react";
 import SearchBox from "../components/searchScreen/SearchBox";
@@ -22,7 +23,7 @@ const SearchScreen = () => {
   const windowWidth = Dimensions.get("window").width;
   const windowHeight = Dimensions.get("window").height;
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <SearchBox />
         <SearchContent data={getData} />
@@ -109,7 +110,7 @@ const SearchScreen = () => {
           </View>
         </View>
       ) : null}
-    </View>
+    </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({
