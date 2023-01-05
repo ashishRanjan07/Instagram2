@@ -55,9 +55,9 @@ const SingleReel = ({ item, index, currentIndex }) => {
           source={item.video}
           rate={1.0}
           volume={1.0}
-          isMuted={false}
+          isMuted={mute}
           resizeMode="cover"
-          shouldPlay
+          shouldPlay={true}
           isLooping
           style={{ width: "100%", height: "100%", position: "absolute" }}
         />
@@ -184,7 +184,7 @@ const SingleReel = ({ item, index, currentIndex }) => {
 const styles = StyleSheet.create({
   container: {
     width: windowWidth,
-    height: windowHeight - 30,
+    height: windowHeight,
     position: "relative",
     justifyContent: "center",
     alignItems: "center",

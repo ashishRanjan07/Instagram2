@@ -33,6 +33,38 @@ export const videoData = [
     likes: "876k",
     isLike: false,
   },
+  {
+    video: require("../../assets/videos/video10.mp4"),
+    postProfile: require("../../assets/images/post4.jpg"),
+    title: "mr. bean",
+    description: "How cute it is !!",
+    likes: "876k",
+    isLike: false,
+  },
+  {
+    video: require("../../assets/videos/video5.mp4"),
+    postProfile: require("../../assets/images/post1.jpg"),
+    title: "Ashish Ranjan",
+    description: "How cute it is !!",
+    likes: "876k",
+    isLike: false,
+  },
+  {
+    video: require("../../assets/videos/video6.mp4"),
+    postProfile: require("../../assets/images/post10.jpg"),
+    title: "Monal",
+    description: "How cute it is Good!!",
+    likes: "876k",
+    isLike: false,
+  },
+  {
+    video: require("../../assets/videos/video7.mp4"),
+    postProfile: require("../../assets/images/post11.jpg"),
+    title: "Monal",
+    description: "cool it is Good!!",
+    likes: "876k",
+    isLike: false,
+  },
 ];
 
 // Friends Profile Data
