@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
     flex: 1,
-    marginTop: Platform.OS == "android" ? 35 : 0,
   },
 });
 export default HomeScreen;
