@@ -6,6 +6,7 @@ import SignUpScreen from "../screens/SignUpScreen";
 import BottomTabNavigation from "./BottomTabNavigation";
 import NewPostScreen from "../screens/NewPostScreen";
 import { createStackNavigator } from "@react-navigation/stack";
+import FriendProfile from "../screens/FriendProfile";
 const Stack = createNativeStackNavigator();
 const stack = createStackNavigator();
 
@@ -31,6 +32,11 @@ export default function AuthNavigation() {
       <Stack.Screen
         name="NewPostScreen"
         component={NewPostScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="FriendProfile"
+        component={FriendProfile}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
