@@ -47,7 +47,7 @@ const SingleReel = ({ item, index, currentIndex }) => {
           resizeMode="cover"
           shouldPlay={true}
           isLooping
-          style={{ width: "100%", height: "100%", position: "absolute" }}
+          style={styles.video}
         />
       </TouchableOpacity>
       <Ionicons
@@ -66,7 +66,7 @@ const SingleReel = ({ item, index, currentIndex }) => {
           position: "absolute",
           width: windowWidth,
           zIndex: 1,
-          bottom: 0, //edited
+          bottom: 100, //edited
           padding: 10,
         }}
       >
@@ -112,7 +112,7 @@ const SingleReel = ({ item, index, currentIndex }) => {
       <View
         style={{
           position: "absolute",
-          bottom: 10,
+          bottom: 100,
           right: 0,
         }}
       >
@@ -178,9 +178,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   touchableopacity: {
+    justifyContent: "center",
+    alignItems: "center",
+    flex: 1,
+    flexDirection: "column",
+  },
+  video: {
+    position: "absolute",
     width: "100%",
     height: "100%",
-    position: "absolute",
   },
 });
 export default SingleReel;

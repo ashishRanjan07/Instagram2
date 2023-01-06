@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, SafeAreaView } from "react-native";
 import React from "react";
 import LoginForm from "../components/loginScreen/LoginForm";
 
@@ -6,13 +6,13 @@ const Instagram_Logo =
   "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png";
 const LoginScreen = ({ navigation }) => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.title}>LoginScreen</Text>
       <View style={styles.logoContainer}>
         <Image source={{ uri: Instagram_Logo, height: 100, width: 100 }} />
       </View>
       <LoginForm navigation={navigation} />
-    </View>
+    </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({

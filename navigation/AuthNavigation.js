@@ -8,6 +8,7 @@ import NewPostScreen from "../screens/NewPostScreen";
 import { createStackNavigator } from "@react-navigation/stack";
 import FriendProfile from "../screens/FriendProfile";
 import EditProfile from "../screens/EditProfile";
+import MessageScreen from "../screens/MessageScreen";
 const Stack = createNativeStackNavigator();
 const stack = createStackNavigator();
 
@@ -44,6 +45,11 @@ export default function AuthNavigation() {
         name="EditProfile"
         component={EditProfile}
         options={{ headerShown: true }}
+      />
+      <Stack.Screen
+        name="MessageScreen"
+        component={MessageScreen}
+        options={{ headerShown: false }}
       />
     </Stack.Navigator>
   );

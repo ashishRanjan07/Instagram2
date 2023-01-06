@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, SafeAreaView } from "react-native";
 import React from "react";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import HomeScreen from "../screens/HomeScreen";
@@ -13,6 +13,13 @@ const Tab = createMaterialBottomTabNavigator();
 const BottomTabNavigation = () => {
   return (
     <Tab.Navigator initialRouteName="Home">
+      {/* <Tab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          tabBarIcon: () => <AntDesign name="home" size={24} color="black" />,
+        }}
+      /> */}
       <Tab.Screen
         name="Home"
         component={HomeScreen}

@@ -1,4 +1,11 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  SafeAreaView,
+} from "react-native";
 import React from "react";
 import { FontAwesome } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
@@ -6,7 +13,7 @@ import { firebase } from "../../firebase";
 
 const Header = ({ navigation }) => {
   return (
-    <View style={styles.conatiner}>
+    <SafeAreaView style={styles.conatiner}>
       <TouchableOpacity
         onPress={() => {
           try {
@@ -29,7 +36,7 @@ const Header = ({ navigation }) => {
             style={styles.icon}
           />
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("MessageScreen")}>
           <View style={styles.unreadBadge}>
             <Text style={styles.unreadBadgeText}>9</Text>
           </View>
@@ -41,7 +48,7 @@ const Header = ({ navigation }) => {
           />
         </TouchableOpacity>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({

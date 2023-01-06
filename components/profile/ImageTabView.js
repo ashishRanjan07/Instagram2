@@ -6,7 +6,7 @@ const ImageTabView = () => {
   const Tab = createMaterialTopTabNavigator();
 
   let sqaure = [];
-  let numberOfSquare = 16;
+  let numberOfSquare = 18;
   for (let index = 0; index < numberOfSquare; index++) {
     sqaure.push(
       <View key={index}>
@@ -79,7 +79,9 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     flexDirection: "row",
     paddingVertical: 5,
-    justifyContent: "space-between",
+    // paddingHorizontal: 2,
+    justifyContent: "space-evenly",
+    alignItems: "flex-start",
   },
   containerSquare: {
     width: 130,

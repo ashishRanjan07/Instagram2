@@ -121,13 +121,13 @@ const Caption = ({ post }) => (
   <View style={{ marginTop: 5 }}>
     <Text>
       <Text style={{ fontWeight: "600" }}>{post.user} </Text>
-      <Text>{post.caption}</Text>
+      {post.caption}
     </Text>
   </View>
 );
 
 const CommentSection = ({ post }) => (
-  <View style={{ marginTop: 5 }}>
+  <View>
     {!!post.comments.length && (
       <Text style={{ color: "gray" }}>
         View {post.comments.length > 1 ? "all" : ""} {post.comments.length}{" "}
@@ -142,8 +142,8 @@ const Comments = ({ post }) => (
     {post.comments.map((comment, index) => (
       <View key={index} style={{ flexDirection: "row", marginTop: 5 }}>
         <Text>
-          <Text style={{ fontWeight: "600" }}>{comment.user} </Text>
-          {comment.comment}
+          <Text style={{ fontWeight: "600" }}>{post.user} </Text>
+          {comment}
         </Text>
       </View>
     ))}

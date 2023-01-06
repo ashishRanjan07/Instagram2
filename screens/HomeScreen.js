@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Platform,
   ScrollView,
+  StatusBar,
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import Header from "../components/home/Header";
@@ -28,6 +29,7 @@ const HomeScreen = ({ navigation }) => {
   }, []);
   return (
     <SafeAreaView style={styles.container}>
+      <StatusBar backgroundColor="white" barStyle="dark-content" />
       <Header navigation={navigation} />
       <Stories />
       <ScrollView>

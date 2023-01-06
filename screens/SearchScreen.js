@@ -52,7 +52,7 @@ const SearchScreen = () => {
             backgroundColor: "rgba(52,52,52,0.8)",
           }}
         >
-          <StatusBar backgroundColor="#525252" barStyle="dark-content" />
+          {/* <StatusBar backgroundColor="#525252" barStyle="dark-content" /> */}
           <View
             style={{
               position: "absolute",
