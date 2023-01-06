@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
-import React from "react";
 import { Divider } from "react-native-elements";
+import React from "react";
 import { AntDesign } from "@expo/vector-icons";
 import { Octicons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
@@ -8,7 +8,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { firebase, db } from "../../firebase";
 
 const Post = ({ post }) => {
-  const handleLike = (post) => {
+  const handlelike = (post) => {
     const currentLikeStatus = !post.likes_by_users.includes(
       firebase.auth().currentUser.email
     );
@@ -21,15 +21,15 @@ const Post = ({ post }) => {
           ? firebase.firestore.FieldValue.arrayUnion(
               firebase.auth().currentUser.email
             )
-          : firebase.firestore.FieldValue.arrayUnion(
+          : firebase.firestore.FieldValue.arrayRemove(
               firebase.auth().currentUser.email
             ),
       })
       .then(() => {
-        console.log("Document Update Sucessfully!");
+        console.log("Document Sucessfully Updated!");
       })
       .catch((error) => {
-        console.log("Error While Updating the Document:", error);
+        console.log("Error while updating the Document:", error);
       });
   };
   return (
@@ -37,8 +37,8 @@ const Post = ({ post }) => {
       <Divider width={1} orientation="vertical" />
       <PostHeader post={post} />
       <PostImage post={post} />
-      <View style={{ marginBottom: 15, marginTop: 10 }}>
-        <PostFooter post={post} handlelike={handleLike} />
+      <View style={{ marginHorizontal: 15, marginTop: 10 }}>
+        <PostFooter post={post} handlelike={handlelike} />
         <Likes post={post} />
         <Caption post={post} />
         <CommentSection post={post} />
@@ -62,6 +62,7 @@ const PostHeader = ({ post }) => (
     </View>
   </View>
 );
+
 const PostImage = ({ post }) => (
   <View style={styles.postImageContainer}>
     <Image source={{ uri: post.imageUrl }} style={styles.image} />
@@ -111,7 +112,7 @@ const PostFooter = ({ handlelike, post }) => (
 const Likes = ({ post }) => (
   <View style={{ flexDirection: "row", marginTop: 4 }}>
     <Text style={{ fontWeight: "600" }}>
-      {post.likes_by_users.length.toLocaleString("en")}likes
+      {post.likes_by_users.length.toLocaleString("en")} likes
     </Text>
   </View>
 );
@@ -119,7 +120,7 @@ const Likes = ({ post }) => (
 const Caption = ({ post }) => (
   <View style={{ marginTop: 5 }}>
     <Text>
-      <Text style={{ fontWeight: "600" }}>{post.user}</Text>
+      <Text style={{ fontWeight: "600" }}>{post.user} </Text>
       <Text>{post.caption}</Text>
     </Text>
   </View>

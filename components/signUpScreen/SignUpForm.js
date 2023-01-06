@@ -140,7 +140,6 @@ const SignUpForm = ({ navigation }) => {
           </>
         )}
       </Formik>
-      <Text>SignUpForm</Text>
     </View>
   );
 };
