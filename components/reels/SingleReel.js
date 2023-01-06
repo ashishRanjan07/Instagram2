@@ -25,7 +25,7 @@ const SingleReel = ({ item, index, currentIndex }) => {
     console.log("error", error);
   };
 
-  const [mute, setMute] = useState(false);
+  const [mute, setMute] = useState(true);
 
   const [like, setLike] = useState(item.isLike);
 
@@ -36,18 +36,6 @@ const SingleReel = ({ item, index, currentIndex }) => {
         activeOpacity={0.9}
         onPress={() => setMute(!mute)}
       >
-        {/* <Video
-          videoRef={videoRef}
-          onBuffer={onBuffer}
-          onError={onError}
-          repeat={true}
-          resizeMode="cover"
-          paused={currentIndex == index ? false : true}
-          source={item.video}
-          muted={mute}
-          style={{ width: "100%", height: "100%", position: "absolute" }}
-          rate={1.0}
-        /> */}
         <Video
           videoRef={videoRef}
           onBuffer={onBuffer}

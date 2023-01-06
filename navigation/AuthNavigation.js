@@ -7,6 +7,7 @@ import BottomTabNavigation from "./BottomTabNavigation";
 import NewPostScreen from "../screens/NewPostScreen";
 import { createStackNavigator } from "@react-navigation/stack";
 import FriendProfile from "../screens/FriendProfile";
+import EditProfile from "../screens/EditProfile";
 const Stack = createNativeStackNavigator();
 const stack = createStackNavigator();
 
@@ -38,6 +39,11 @@ export default function AuthNavigation() {
         name="FriendProfile"
         component={FriendProfile}
         options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="EditProfile"
+        component={EditProfile}
+        options={{ headerShown: true }}
       />
     </Stack.Navigator>
   );
