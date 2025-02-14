@@ -22,6 +22,7 @@ const LoginForm = ({ navigation }) => {
       .min(6, "Your Password has to have atleast 6 characters"),
   });
   const onLogin = async (email, password) => {
+    navigation.navigate("BottomTabNavigation");
     try {
       await firebase.auth().signInWithEmailAndPassword(email, password);
       console.log("Login Sucessful", email, password);

@@ -1,8 +1,11 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { LogBox, StyleSheet, Text, View } from "react-native";
 import RootNavigation from "./navigation/RootNavigation";
 import LoginScreen from "./screens/LoginScreen";
 
+LogBox.ignoreLogs(['Warning: ...']);
+LogBox.ignoreAllLogs();
+LogBox.ignoreLogs(['Remote debugger']);
 export default function App() {
   return <RootNavigation />;
 }
